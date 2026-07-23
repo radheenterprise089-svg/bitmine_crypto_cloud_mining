@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BitMiner - Premium Cloud Mining Simulation Platform</title>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── Header & Navigation ── -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="logo">
+        <i class="fa-solid fa-cube"></i> BitMiner
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#calculator">Earnings Calculator</a></li>
+          <li><a href="#how-it-works">How it Works</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#download" class="btn-primary">Download App <i class="fa-solid fa-arrow-down"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── Hero Section ── -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <h1>Cloud Mining <br><span class="gradient-text">Simplified.</span></h1>
+        <p>Start your mining journey directly from your mobile device. Secure, transparent, and completely optimized to run without consuming device hardware or battery.</p>
+        <div class="hero-buttons">
+          <a href="#download" class="btn-primary">Download App <i class="fa-solid fa-download"></i></a>
+          <a href="#features" class="btn-secondary">Explore Features <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3 id="stat-miners">124,580</h3>
+            <p>Active Miners</p>
+          </div>
+          <div class="stat-item">
+            <h3 id="stat-btc">0.00000000</h3>
+            <p>BTC Mined Today</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-mockup">
+        <div class="mockup-glow"></div>
+        <div class="device-frame">
+          <div class="device-notch"></div>
+          <div class="app-screen">
+            <div class="app-header">
+              <span><i class="fa-solid fa-cube"></i> BitMiner</span>
+              <i class="fa-solid fa-bell"></i>
+            </div>
+            
+            <div class="app-card">
+              <p class="app-card-title">Balance</p>
+              <p class="app-card-val">0.00054812 <span style="font-size: 14px; color: var(--secondary);">BTC</span></p>
+              <p style="font-size: 11px; color: var(--success); margin-top: 4px;">+$35.62 USD</p>
+            </div>
+
+            <div class="app-card" style="padding: 12px;">
+              <p class="app-card-title" style="text-align: left; font-size: 11px;">Mining Speed</p>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 4px;">
+                <span style="font-weight: 700; font-size: 14px; color: var(--text-primary);">100 GH/s</span>
+                <span style="font-size: 11px; color: var(--text-secondary); background: rgba(124,58,237,0.15); padding: 2px 8px; border-radius: 20px;">Active</span>
+              </div>
+            </div>
+
+            <div class="app-mining-btn">
+              <i class="fa-solid fa-play"></i> Slide to Start Mining
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Features Section ── -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Premium <span class="gradient-text">Mining Features</span></h2>
+        <p>No expensive mining rigs or thermal limits. BitMiner utilizes advanced cloud virtualization technologies to simplify your mining experience.</p>
+      </div>
+      <div class="features-grid">
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-cloud"></i></div>
+          <h3>Cloud Virtualization</h3>
+          <p>Mining runs entirely on cloud server nodes. Zero heat, zero CPU load, and zero battery drain on your actual smartphone.</p>
+        </div>
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-wallet"></i></div>
+          <h3>Secure Withdrawals</h3>
+          <p>Direct withdrawals to your personal TRC20/BTC wallet addresses with transparent transaction logs.</p>
+        </div>
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Daily Hashrate Boosts</h3>
+          <p>Boost your hashrate power by watching promotional sponsor videos or participating in daily login events.</p>
+        </div>
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-user-group"></i></div>
+          <h3>Referral Rewards</h3>
+          <p>Invite friends and earn persistent hashrate bonuses and coin multipliers for every active miner in your network.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Interactive Earnings Calculator ── -->
+  <section class="calculator-section" id="calculator">
+    <div class="container">
+      <div class="calc-box">
+        <div class="calc-left">
+          <h2>Estimate Your <br><span class="gradient-text">Earnings</span></h2>
+          <p>Use our interactive cloud mining simulator calculator to estimate your daily, weekly, and monthly earnings based on your hashrate power.</p>
+          <div class="calc-sliders">
+            <div class="slider-group">
+              <div class="slider-header">
+                <span>Mining Power (Hashrate)</span>
+                <span id="hashrate-label">100 GH/s</span>
+              </div>
+              <input type="range" id="hashrate-slider" min="10" max="500" value="100">
+            </div>
+            <div class="slider-group">
+              <div class="slider-header">
+                <span>Daily Active Hours</span>
+                <span id="hours-label">24 hrs</span>
+              </div>
+              <input type="range" id="hours-slider" min="1" max="24" value="24">
+            </div>
+          </div>
+        </div>
+        <div class="calc-right">
+          <p class="calc-output-title">Estimated Monthly Earnings</p>
+          <p class="calc-output-val" id="calc-btc-val">0.00054000 <span>BTC</span></p>
+          <p class="calc-usd-val" id="calc-usd-val">+$35.10 USD</p>
+          <p style="font-size: 11px; color: var(--text-muted);">Estimations are based on current mining difficulty metrics. USD value calculations assume 1 BTC = $65,000 USD.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── How It Works Section ── -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <h2>Start Mining in <span class="gradient-text">3 Simple Steps</span></h2>
+        <p>We've eliminated setup hurdles. You can start mining in under 60 seconds.</p>
+      </div>
+      <div class="steps-container">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h3>Download App</h3>
+          <p>Get the official BitMiner app APK directly or link through our store assets.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3>Create Account</h3>
+          <p>Secure login using Google Sign-In and input a referral code to get your initial welcome gift.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h3>Slide & Start</h3>
+          <p>Slide the confirmation button on the dashboard to activate your cloud miner for the next 24 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ Section ── -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Frequently Asked <span class="gradient-text">Questions</span></h2>
+        <p>Everything you need to know about the BitMiner platform.</p>
+      </div>
+      <div class="faq-container">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>What is BitMiner?</h3>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </div>
+          <div class="faq-content">
+            <p>BitMiner is a cloud mining management and simulation platform that lets users coordinate remote mining nodes. The app acts as a dashboard to claim earnings, boost mining speed, and request payouts securely.</p>
+          </div>
+        </div>
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>Will mining damage or heat up my mobile device?</h3>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </div>
+          <div class="faq-content">
+            <p>No. Traditional mining runs heavy calculations on hardware, leading to battery degradation and overheating. BitMiner runs all computations on secure remote servers. Your phone is only used as a tracking dashboard.</p>
+          </div>
+        </div>
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>What is the minimum withdrawal limit?</h3>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </div>
+          <div class="faq-content">
+            <p>The standard minimum withdrawal threshold is 0.00001 BTC. Payout requests are verified and processed directly to TRC20/BTC wallet addresses within 24 to 72 hours.</p>
+          </div>
+        </div>
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <div class="faq-header">
+            <h3>How do hashrate boosts work?</h3>
+            <i class="fa-solid fa-plus faq-icon"></i>
+          </div>
+          <div class="faq-content">
+            <p>You can temporarily boost your hashrate power by claiming daily bonuses, activating the sponsor video multipliers, or by referring active users to the platform.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Download Call to Action ── -->
+  <section class="calculator-section" id="download" style="text-align: center; background: radial-gradient(circle at center, rgba(124, 58, 237, 0.08) 0%, transparent 80%);">
+    <div class="container" style="max-width: 800px;">
+      <h2 style="font-size: 40px; margin-bottom: 20px;">Ready to Start <span class="gradient-text">Mining?</span></h2>
+      <p style="color: var(--text-secondary); margin-bottom: 40px;">Download the app today, input code, and start claiming your free cloud mining rewards instantly.</p>
+      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <a href="#" class="btn-primary" style="padding: 16px 36px; font-size: 16px;">
+          <i class="fa-brands fa-android"></i> Download for Android (APK)
+        </a>
+        <a href="#" class="btn-secondary" style="padding: 16px 36px; font-size: 16px;">
+          <i class="fa-solid fa-store"></i> Play Store (Coming Soon)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo"><i class="fa-solid fa-cube"></i> BitMiner</a>
+          <p>A premium cloud mining simulation and reward platform. Start earning securely and transparently in a few taps.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#calculator">Calculator</a></li>
+            <li><a href="#how-it-works">How it Works</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Disclaimer</a></li>
+          </ul>
+        </div>
+        <div class="footer-disclaimer">
+          <p><strong>Disclaimer:</strong> BitMiner is a cloud mining management and simulation application. Cloud mining involves market volatilities, difficulty index changes, and platform specific reward conditions. Please review terms and disclaimer policies before registering.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 BitMiner. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-telegram"></i></a>
+          <a href="#"><i class="fa-brands fa-discord"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Javascript Logic ── -->
+  <script>
+    // Live Mined BTC Counter Animation
+    let btcMined = 0.04581295;
+    const btcCounterEl = document.getElementById('stat-btc');
+    setInterval(() => {
+      // Increment slightly to simulate live mining
+      btcMined += 0.00000003;
+      btcCounterEl.innerText = btcMined.toFixed(8);
+    }, 1500);
+
+    // Earnings Calculator
+    const hashrateSlider = document.getElementById('hashrate-slider');
+    const hoursSlider = document.getElementById('hours-slider');
+    const hashrateLabel = document.getElementById('hashrate-label');
+    const hoursLabel = document.getElementById('hours-label');
+    const calcBtcVal = document.getElementById('calc-btc-val');
+    const calcUsdVal = document.getElementById('calc-usd-val');
+
+    const BTC_PRICE = 65000; // Simulated price
+    // Base rate matching the repository default: 0.000000000000045 BTC/second/GH
+    const BASE_RATE_PER_SEC_PER_GH = 0.000000000000045; 
+
+    function updateCalculation() {
+      const hashrate = parseFloat(hashrateSlider.value);
+      const hours = parseFloat(hoursSlider.value);
+
+      hashrateLabel.innerText = `${hashrate} GH/s`;
+      hoursLabel.innerText = `${hours} hrs`;
+
+      // Earnings = Hashrate * (Hours * 3600 seconds) * Base Rate * 30 Days (for Monthly Earnings)
+      const secondsPerMonth = hours * 3600 * 30;
+      const btcEarned = hashrate * secondsPerMonth * BASE_RATE_PER_SEC_PER_GH;
+      const usdEarned = btcEarned * BTC_PRICE;
+
+      calcBtcVal.innerHTML = `${btcEarned.toFixed(8)} <span>BTC</span>`;
+      calcUsdVal.innerText = `+$${usdEarned.toFixed(2)} USD`;
+    }
+
+    hashrateSlider.addEventListener('input', updateCalculation);
+    hoursSlider.addEventListener('input', updateCalculation);
+    updateCalculation(); // Initial call
+
+    // FAQ Accordion Logic
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const header = item.querySelector('.faq-header');
+      const content = item.querySelector('.faq-content');
+      header.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Close all other items
+        faqItems.forEach(i => {
+          i.classList.remove('active');
+          i.querySelector('.faq-content').style.maxHeight = null;
+        });
+
+        if (!isActive) {
+          item.classList.add('active');
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
