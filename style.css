@@ -113,6 +113,11 @@ header {
   filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.5));
 }
 
+nav {
+  display: flex;
+  align-items: center;
+}
+
 nav ul {
   display: flex;
   list-style: none;
@@ -129,6 +134,19 @@ nav ul a {
 }
 
 nav ul a:hover {
+  color: var(--primary);
+}
+
+/* Mobile Menu Toggle button */
+.menu-toggle {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+.menu-toggle:hover {
   color: var(--primary);
 }
 
@@ -805,8 +823,38 @@ footer {
   .hero-content h1 {
     font-size: 40px;
   }
+  .menu-toggle {
+    display: block;
+  }
+  nav {
+    position: relative;
+  }
   nav ul {
-    display: none; /* simple hidden navigation for mobile */
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    padding: 24px;
+    gap: 20px;
+    width: 240px;
+    box-shadow: var(--purple-glow);
+    z-index: 100;
+    align-items: stretch;
+  }
+  nav ul.active {
+    display: flex;
+  }
+  nav ul li {
+    text-align: center;
+  }
+  nav ul li a.btn-primary {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
   .footer-grid {
     grid-template-columns: 1fr;
