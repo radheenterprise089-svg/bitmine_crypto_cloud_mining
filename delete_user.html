@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Account - BitMine: BTC Cloud Mining</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Request deletion of your BitMine: BTC Cloud Mining account and associated data.">
+  <meta name="keywords" content="delete account, delete user data, bitmine support, data deletion, remove account">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bitmine-crypto-cloud-mining-d8o9.vercel.app/delete_user.html">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .delete-container {
+      padding: 140px 0 100px 0;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .delete-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+    }
+    .delete-card::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      height: 4px;
+      background: linear-gradient(90deg, #EF4444, #F59E0B);
+      border-radius: 20px 20px 0 0;
+    }
+    .delete-card h1 {
+      font-size: 32px;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .delete-subtitle {
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
+    .warning-box {
+      background: rgba(239, 68, 68, 0.1);
+      border-left: 4px solid #EF4444;
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 24px;
+    }
+    .warning-box h3 {
+      color: #EF4444;
+      font-size: 16px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .warning-box p {
+      color: var(--text-secondary);
+      font-size: 13.5px;
+      line-height: 1.5;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      color: var(--text-primary);
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    .form-group input[type="email"],
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(7, 8, 12, 0.6);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      color: var(--text-primary);
+      font-size: 14px;
+      font-family: 'Poppins', sans-serif;
+      transition: var(--transition);
+    }
+    .form-group input[type="email"]:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #EF4444;
+      outline: none;
+      box-shadow: 0 0 10px rgba(239, 68, 68, 0.2);
+    }
+    .checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-top: 24px;
+      margin-bottom: 30px;
+    }
+    .checkbox-group input[type="checkbox"] {
+      margin-top: 4px;
+      accent-color: #EF4444;
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+    }
+    .checkbox-group label {
+      color: var(--text-secondary);
+      font-size: 13.5px;
+      line-height: 1.5;
+      cursor: pointer;
+      user-select: none;
+    }
+    .btn-danger {
+      width: 100%;
+      background: linear-gradient(135deg, #EF4444 0%, #B91C1C 100%);
+      color: var(--text-primary);
+      padding: 14px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+      transition: var(--transition);
+    }
+    .btn-danger:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(239, 68, 68, 0.5);
+    }
+    .btn-danger:disabled {
+      background: var(--card-border);
+      color: var(--text-muted);
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+    .success-card {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .success-icon {
+      font-size: 60px;
+      color: var(--success);
+      margin-bottom: 24px;
+      filter: drop-shadow(0 0 15px rgba(16, 185, 129, 0.4));
+    }
+    .success-card h2 {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+    .success-card p {
+      color: var(--text-secondary);
+      font-size: 15px;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+    @media (max-width: 768px) {
+      .delete-container {
+        padding: 100px 16px 60px 16px;
+      }
+      .delete-card {
+        padding: 30px 20px;
+      }
+      .delete-card h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header & Navigation ── -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo" aria-label="BitMine Home">
+        <i class="fa-solid fa-cube" aria-hidden="true"></i> BitMine
+      </a>
+      <nav>
+        <div class="menu-toggle" id="mobile-menu" role="button" aria-label="Toggle navigation menu" tabindex="0" aria-expanded="false">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </div>
+        <ul>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#calculator">Calculator</a></li>
+          <li><a href="index.html#how-it-works">How it Works</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#download" class="btn-primary">Download App <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ── Main Container ── -->
+  <main class="container delete-container">
+    <!-- Deletion Form Card -->
+    <div class="delete-card" id="deletion-card">
+      <h1 class="gradient-text">Delete Account</h1>
+      <p class="delete-subtitle">Request permanent removal of your cloud mining account</p>
+
+      <div class="warning-box">
+        <h3><i class="fa-solid fa-triangle-exclamation"></i> Permanent Action Warning</h3>
+        <p>Deleting your account is permanent. You will permanently lose your mined balances, daily active hours history, hashrate speeds, referrals, and all related profile information. This action cannot be reversed.</p>
+      </div>
+
+      <form id="delete-account-form" onsubmit="handleDeletionSubmit(event)">
+        <div class="form-group">
+          <label for="email">Registered Email Address</label>
+          <input type="email" id="email" name="email" placeholder="example@gmail.com" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label for="reason">Reason for leaving (Optional)</label>
+          <select id="reason" name="reason">
+            <option value="" disabled selected>Select a reason</option>
+            <option value="no-longer-need">No longer using the application</option>
+            <option value="too-difficult">Found mining simulator too complex</option>
+            <option value="privacy">Privacy concerns</option>
+            <option value="bugs">Encountered application bugs</option>
+            <option value="other">Other reason</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Additional comments or feedback (Optional)</label>
+          <textarea id="message" name="message" rows="4" placeholder="Let us know how we can improve..."></textarea>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="confirm-deletion" required>
+          <label for="confirm-deletion">
+            I understand that deleting my account is final and will permanently erase all my data, including my simulated mined balances and active miners history.
+          </label>
+        </div>
+
+        <button type="submit" class="btn-danger" id="submit-btn">
+          <i class="fa-solid fa-trash-can"></i> Delete My Account
+        </button>
+      </form>
+    </div>
+
+    <!-- Success Modal Card -->
+    <div class="delete-card success-card" id="success-card">
+      <div class="success-icon">
+        <i class="fa-regular fa-circle-check"></i>
+      </div>
+      <h2 class="gradient-text">Request Received</h2>
+      <p>
+        Your account deletion request has been successfully registered. In compliance with data safety standards, we will permanently purge all your personal records, wallet details, and mining milestones within <strong>7 business days</strong>.
+      </p>
+      <p style="font-size: 13.5px; color: var(--text-muted);">
+        If you have questions, please feel free to reach out to us at <a href="mailto:gurukrupatechnology007@gmail.com" style="color: var(--secondary); text-decoration: none;">gurukrupatechnology007@gmail.com</a>.
+      </p>
+      <a href="index.html" class="btn-secondary back-btn">
+        <i class="fa-solid fa-house"></i> Return Home
+      </a>
+    </div>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="BitMine Home"><i class="fa-solid fa-cube" aria-hidden="true"></i> BitMine</a>
+          <p>A premium cloud mining simulation and reward platform. Start earning securely and transparently in a few taps.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#calculator">Calculator</a></li>
+            <li><a href="index.html#how-it-works">How it Works</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="terms_of_use.html">Terms of Use</a></li>
+            <li><a href="privacy_policy.html">Privacy Policy</a></li>
+            <li><a href="delete_user.html">Delete Account</a></li>
+            <li><a href="#">Disclaimer</a></li>
+          </ul>
+        </div>
+        <div class="footer-disclaimer">
+          <p><strong>Disclaimer:</strong> BitMine: BTC Cloud Mining is a cloud mining management and simulation application. Cloud mining involves market volatilities, difficulty index changes, and platform specific reward conditions. Please review terms and disclaimer policies before registering.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 BitMine. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Discord"><i class="fa-brands fa-discord" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Javascript Logic ── -->
+  <script>
+    // Mobile Navigation Menu Toggle
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navUl = document.querySelector('nav ul');
+    
+    function toggleMenu() {
+      navUl.classList.toggle('active');
+      const icon = mobileMenu.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-xmark');
+      const isExpanded = navUl.classList.contains('active');
+      mobileMenu.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+    }
+
+    mobileMenu.addEventListener('click', toggleMenu);
+    mobileMenu.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMenu();
+      }
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('nav ul a').forEach(link => {
+      link.addEventListener('click', () => {
+        navUl.classList.remove('active');
+        const icon = mobileMenu.querySelector('i');
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-xmark');
+        mobileMenu.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Form Submission Handling
+    function handleDeletionSubmit(event) {
+      event.preventDefault();
+      
+      const submitBtn = document.getElementById('submit-btn');
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing Request...';
+      
+      // Simulate API request/purgation time
+      setTimeout(() => {
+        document.getElementById('deletion-card').style.display = 'none';
+        document.getElementById('success-card').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 1500);
+    }
+  </script>
+</body>
+</html>
