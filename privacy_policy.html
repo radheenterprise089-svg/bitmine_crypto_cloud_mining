@@ -60,19 +60,19 @@
   <!-- ── Header & Navigation ── -->
   <header>
     <div class="container nav-wrapper">
-      <a href="index.html" class="logo">
-        <i class="fa-solid fa-cube"></i> BitMine
+      <a href="index.html" class="logo" aria-label="BitMine Home">
+        <i class="fa-solid fa-cube" aria-hidden="true"></i> BitMine
       </a>
       <nav>
-        <div class="menu-toggle" id="mobile-menu">
-          <i class="fa-solid fa-bars"></i>
+        <div class="menu-toggle" id="mobile-menu" role="button" aria-label="Toggle navigation menu" tabindex="0" aria-expanded="false">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
         </div>
         <ul>
           <li><a href="index.html#features">Features</a></li>
           <li><a href="index.html#calculator">Calculator</a></li>
           <li><a href="index.html#how-it-works">How it Works</a></li>
           <li><a href="index.html#faq">FAQ</a></li>
-          <li><a href="index.html#download" class="btn-primary">Download App <i class="fa-solid fa-arrow-down"></i></a></li>
+          <li><a href="index.html#download" class="btn-primary">Download App <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a></li>
         </ul>
       </nav>
     </div>
@@ -141,9 +141,9 @@
       <div class="footer-bottom" style="border: none; padding: 0;">
         <p>&copy; 2026 BitMine. All rights reserved.</p>
         <div class="social-links">
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-telegram"></i></a>
-          <a href="#"><i class="fa-brands fa-discord"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Discord"><i class="fa-brands fa-discord" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
@@ -154,11 +154,32 @@
     const mobileMenu = document.getElementById('mobile-menu');
     const navUl = document.querySelector('nav ul');
     
-    mobileMenu.addEventListener('click', () => {
+    function toggleMenu() {
       navUl.classList.toggle('active');
       const icon = mobileMenu.querySelector('i');
       icon.classList.toggle('fa-bars');
       icon.classList.toggle('fa-xmark');
+      const isExpanded = navUl.classList.contains('active');
+      mobileMenu.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+    }
+
+    mobileMenu.addEventListener('click', toggleMenu);
+    mobileMenu.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMenu();
+      }
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('nav ul a').forEach(link => {
+      link.addEventListener('click', () => {
+        navUl.classList.remove('active');
+        const icon = mobileMenu.querySelector('i');
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-xmark');
+        mobileMenu.setAttribute('aria-expanded', 'false');
+      });
     });
   </script>
 </body>

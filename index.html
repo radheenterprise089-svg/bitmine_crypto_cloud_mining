@@ -36,19 +36,19 @@
   <!-- ── Header & Navigation ── -->
   <header>
     <div class="container nav-wrapper">
-      <a href="#" class="logo">
-        <i class="fa-solid fa-cube"></i> BitMine
+      <a href="#" class="logo" aria-label="BitMine Home">
+        <i class="fa-solid fa-cube" aria-hidden="true"></i> BitMine
       </a>
       <nav>
-        <div class="menu-toggle" id="mobile-menu">
-          <i class="fa-solid fa-bars"></i>
+        <div class="menu-toggle" id="mobile-menu" role="button" aria-label="Toggle navigation menu" tabindex="0" aria-expanded="false">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
         </div>
         <ul>
           <li><a href="#features">Features</a></li>
           <li><a href="#calculator">Earnings Calculator</a></li>
           <li><a href="#how-it-works">How it Works</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="#download" class="btn-primary">Download App <i class="fa-solid fa-arrow-down"></i></a></li>
+          <li><a href="#download" class="btn-primary">Download App <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a></li>
         </ul>
       </nav>
     </div>
@@ -61,8 +61,8 @@
         <h1>Cloud Mining <br><span class="gradient-text">Simplified.</span></h1>
         <p>Start your mining journey directly from your mobile device using <strong>BitMine: BTC Cloud Mining</strong>. Secure, transparent, and completely optimized to run without consuming device hardware or battery.</p>
         <div class="hero-buttons">
-          <a href="#download" class="btn-primary">Download App <i class="fa-solid fa-download"></i></a>
-          <a href="#features" class="btn-secondary">Explore Features <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#download" class="btn-primary">Download App <i class="fa-solid fa-download" aria-hidden="true"></i></a>
+          <a href="#features" class="btn-secondary">Explore Features <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
         </div>
         <div class="hero-stats">
           <div class="stat-item">
@@ -81,8 +81,8 @@
           <div class="device-notch"></div>
           <div class="app-screen">
             <div class="app-header">
-              <span><i class="fa-solid fa-cube"></i> BitMine</span>
-              <i class="fa-solid fa-bell"></i>
+              <span><i class="fa-solid fa-cube" aria-hidden="true"></i> BitMine</span>
+              <i class="fa-solid fa-bell" aria-hidden="true"></i>
             </div>
             
             <div class="app-card">
@@ -100,7 +100,7 @@
             </div>
 
             <div class="app-mining-btn">
-              <i class="fa-solid fa-play"></i> Slide to Start Mining
+              <i class="fa-solid fa-play" aria-hidden="true"></i> Slide to Start Mining
             </div>
           </div>
         </div>
@@ -118,25 +118,25 @@
       <div class="features-grid">
         <!-- Feature 1 -->
         <div class="feature-card">
-          <div class="feature-icon"><i class="fa-solid fa-cloud"></i></div>
+          <div class="feature-icon"><i class="fa-solid fa-cloud" aria-hidden="true"></i></div>
           <h3>Cloud Virtualization</h3>
           <p>Mining runs entirely on cloud server nodes. Zero heat, zero CPU load, and zero battery drain on your actual smartphone.</p>
         </div>
         <!-- Feature 2 -->
         <div class="feature-card">
-          <div class="feature-icon"><i class="fa-solid fa-wallet"></i></div>
+          <div class="feature-icon"><i class="fa-solid fa-wallet" aria-hidden="true"></i></div>
           <h3>Secure Withdrawals</h3>
           <p>Direct withdrawals to your personal TRC20/BTC wallet addresses with transparent transaction logs.</p>
         </div>
         <!-- Feature 3 -->
         <div class="feature-card">
-          <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+          <div class="feature-icon"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
           <h3>Daily Hashrate Boosts</h3>
           <p>Boost your hashrate power by watching promotional sponsor videos or participating in daily login events.</p>
         </div>
         <!-- Feature 4 -->
         <div class="feature-card">
-          <div class="feature-icon"><i class="fa-solid fa-user-group"></i></div>
+          <div class="feature-icon"><i class="fa-solid fa-user-group" aria-hidden="true"></i></div>
           <h3>Referral Rewards</h3>
           <p>Invite friends and earn persistent hashrate bonuses and coin multipliers for every active miner in your network.</p>
         </div>
@@ -157,14 +157,14 @@
                 <span>Mining Power (Hashrate)</span>
                 <span id="hashrate-label">100 GH/s</span>
               </div>
-              <input type="range" id="hashrate-slider" min="10" max="500" value="100">
+              <input type="range" id="hashrate-slider" min="10" max="500" value="100" aria-label="Mining Power Hashrate Slider">
             </div>
             <div class="slider-group">
               <div class="slider-header">
                 <span>Daily Active Hours</span>
                 <span id="hours-label">24 hrs</span>
               </div>
-              <input type="range" id="hours-slider" min="1" max="24" value="24">
+              <input type="range" id="hours-slider" min="1" max="24" value="24" aria-label="Daily active hours slider">
             </div>
           </div>
         </div>
@@ -215,9 +215,9 @@
       <div class="faq-container">
         <!-- FAQ 1 -->
         <div class="faq-item">
-          <div class="faq-header">
+          <div class="faq-header" role="button" tabindex="0" aria-expanded="false">
             <h3>What is BitMine: BTC Cloud Mining?</h3>
-            <i class="fa-solid fa-plus faq-icon"></i>
+            <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
           </div>
           <div class="faq-content">
             <p>BitMine: BTC Cloud Mining is a cloud mining management and simulation platform that lets users coordinate remote mining nodes. The app acts as a dashboard to claim earnings, boost mining speed, and request payouts securely.</p>
@@ -225,9 +225,9 @@
         </div>
         <!-- FAQ 2 -->
         <div class="faq-item">
-          <div class="faq-header">
+          <div class="faq-header" role="button" tabindex="0" aria-expanded="false">
             <h3>Will mining damage or heat up my mobile device?</h3>
-            <i class="fa-solid fa-plus faq-icon"></i>
+            <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
           </div>
           <div class="faq-content">
             <p>No. Traditional mining runs heavy calculations on hardware, leading to battery degradation and overheating. BitMine runs all computations on secure remote servers. Your phone is only used as a tracking dashboard.</p>
@@ -235,9 +235,9 @@
         </div>
         <!-- FAQ 3 -->
         <div class="faq-item">
-          <div class="faq-header">
+          <div class="faq-header" role="button" tabindex="0" aria-expanded="false">
             <h3>What is the minimum withdrawal limit?</h3>
-            <i class="fa-solid fa-plus faq-icon"></i>
+            <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
           </div>
           <div class="faq-content">
             <p>The standard minimum withdrawal threshold is 0.00001 BTC. Payout requests are verified and processed directly to TRC20/BTC wallet addresses within 24 to 72 hours.</p>
@@ -245,9 +245,9 @@
         </div>
         <!-- FAQ 4 -->
         <div class="faq-item">
-          <div class="faq-header">
+          <div class="faq-header" role="button" tabindex="0" aria-expanded="false">
             <h3>How do hashrate boosts work?</h3>
-            <i class="fa-solid fa-plus faq-icon"></i>
+            <i class="fa-solid fa-plus faq-icon" aria-hidden="true"></i>
           </div>
           <div class="faq-content">
             <p>You can temporarily boost your hashrate power by claiming daily bonuses, activating the sponsor video multipliers, or by referring active users to the platform.</p>
@@ -264,10 +264,10 @@
       <p style="color: var(--text-secondary); margin-bottom: 40px;">Download the app today, input code, and start claiming your free cloud mining rewards instantly.</p>
       <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
         <a href="#" class="btn-primary" style="padding: 16px 36px; font-size: 16px;">
-          <i class="fa-brands fa-android"></i> Download for Android (APK)
+          <i class="fa-brands fa-android" aria-hidden="true"></i> Download for Android (APK)
         </a>
         <a href="#" class="btn-secondary" style="padding: 16px 36px; font-size: 16px;">
-          <i class="fa-solid fa-store"></i> Play Store (Coming Soon)
+          <i class="fa-solid fa-store" aria-hidden="true"></i> Play Store (Coming Soon)
         </a>
       </div>
     </div>
@@ -278,7 +278,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="#" class="logo"><i class="fa-solid fa-cube"></i> BitMine</a>
+          <a href="#" class="logo" aria-label="BitMine Home"><i class="fa-solid fa-cube" aria-hidden="true"></i> BitMine</a>
           <p>A premium cloud mining simulation and reward platform. Start earning securely and transparently in a few taps.</p>
         </div>
         <div class="footer-links">
@@ -305,9 +305,9 @@
       <div class="footer-bottom">
         <p>&copy; 2026 BitMine. All rights reserved.</p>
         <div class="social-links">
-          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-telegram"></i></a>
-          <a href="#"><i class="fa-brands fa-discord"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Discord"><i class="fa-brands fa-discord" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
@@ -319,11 +319,21 @@
     const mobileMenu = document.getElementById('mobile-menu');
     const navUl = document.querySelector('nav ul');
     
-    mobileMenu.addEventListener('click', () => {
+    function toggleMenu() {
       navUl.classList.toggle('active');
       const icon = mobileMenu.querySelector('i');
       icon.classList.toggle('fa-bars');
       icon.classList.toggle('fa-xmark');
+      const isExpanded = navUl.classList.contains('active');
+      mobileMenu.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+    }
+
+    mobileMenu.addEventListener('click', toggleMenu);
+    mobileMenu.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMenu();
+      }
     });
 
     // Close menu when clicking on a link
@@ -333,6 +343,7 @@
         const icon = mobileMenu.querySelector('i');
         icon.classList.add('fa-bars');
         icon.classList.remove('fa-xmark');
+        mobileMenu.setAttribute('aria-expanded', 'false');
       });
     });
 
@@ -379,17 +390,28 @@
     faqItems.forEach(item => {
       const header = item.querySelector('.faq-header');
       const content = item.querySelector('.faq-content');
-      header.addEventListener('click', () => {
+      
+      function toggleFAQ() {
         const isActive = item.classList.contains('active');
         
         faqItems.forEach(i => {
           i.classList.remove('active');
+          i.querySelector('.faq-header').setAttribute('aria-expanded', 'false');
           i.querySelector('.faq-content').style.maxHeight = null;
         });
 
         if (!isActive) {
           item.classList.add('active');
+          header.setAttribute('aria-expanded', 'true');
           content.style.maxHeight = content.scrollHeight + "px";
+        }
+      }
+
+      header.addEventListener('click', toggleFAQ);
+      header.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleFAQ();
         }
       });
     });
